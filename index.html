@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo e Cidade</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Fundo roxo */
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Seção do campo - cor de fundo roxa */
+        .campo {
+            flex: 1;
+            background-color: #7A4DFF; /* Roxo */
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 2rem;
+            background-image: url('campo.jpg'); /* Substitua pelo link da imagem do campo */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Seção da cidade - cor de fundo preta */
+        .cidade {
+            flex: 1;
+            background-color: #1a1a1a; /* Preto */
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 2rem;
+            background-image: url('cidade.jpg'); /* Substitua pelo link da imagem da cidade */
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Adicionando um efeito suave ao passar o mouse */
+        .campo:hover, .cidade:hover {
+            filter: brightness(1.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="campo">
+            <div>
+                <h1>Bem-vindo ao Campo!</h1>
+                <p>A natureza, o ar puro, e a tranquilidade.</p>
+            </div>
+        </div>
+        <div class="cidade">
+            <div>
+                <h1>Bem-vindo à Cidade!</h1>
+                <p>Modernidade, agitação e luzes brilhantes.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

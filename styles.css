@@ -1,0 +1,107 @@
+/* Resetando margens e padding para garantir um design limpo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Container principal para a divisão entre campo e cidade */
+.container {
+    display: flex;
+    height: 100vh; /* A altura total da tela */
+}
+
+/* Estilo da seção do campo */
+.campo {
+    flex: 1;
+    background-color: #7A4DFF; /* Roxo */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    background-image: url('campo.jpg'); /* Imagem de fundo do campo */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: filter 0.3s ease;
+}
+
+/* Estilo da seção da cidade */
+.cidade {
+    flex: 1;
+    background-color: #1a1a1a; /* Preto */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    background-image: url('cidade.jpg'); /* Imagem de fundo da cidade */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: filter 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre as seções */
+.campo:hover, .cidade:hover {
+    filter: brightness(1.2); /* Aumenta o brilho das imagens ao passar o mouse */
+}
+
+/* Estilos para o conteúdo das seções */
+.campo h1, .cidade h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombras no texto */
+}
+
+.campo p, .cidade p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Sombras no texto */
+}
+
+/* Estilo do texto da cidade */
+.cidade h1, .cidade p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra no texto para destaque */
+}
+
+/* Responsividade: Ajustes para telas menores */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Muda a direção do layout para colunas */
+    }
+
+    .campo, .cidade {
+        height: 50vh; /* Ajusta a altura para metade da tela em dispositivos menores */
+    }
+
+    .campo h1, .cidade h1 {
+        font-size: 2.5rem; /* Ajusta o tamanho do título */
+    }
+
+    .campo p, .cidade p {
+        font-size: 1rem; /* Ajusta o tamanho do texto */
+    }
+}
+
+/* Adicionando o estilo do conteúdo centralizado com uma borda suave */
+.container div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centraliza o conteúdo verticalmente */
+}
+
+/* Adiciona uma sombra de borda suave nas seções */
+.campo, .cidade {
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
